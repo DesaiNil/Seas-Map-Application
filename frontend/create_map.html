@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>➕ Create New Map</h2>
+
+    <form id="createMapForm">
+      <label for="mapName">Map Name:</label>
+      <input type="text" id="mapName" name="mapName" required>
+      <br><br>
+
+      <label for="numPaths">Number of Paths:</label>
+      <input type="number" id="numPaths" name="numPaths" min="1" required>
+      <br><br>
+
+      <button type="submit">Next</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('createMapForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const mapName = document.getElementById('mapName').value.trim();
+      const numPaths = document.getElementById('numPaths').value.trim();
+
+      if (!mapName || !numPaths) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      // Redirect to add_paths.html with query params
+      window.location.href = `add_paths.html?mapName=${encodeURIComponent(mapName)}&numPaths=${encodeURIComponent(numPaths)}`;
+    });
+  </script>
+</body>
+</html>
