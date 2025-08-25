@@ -16,7 +16,7 @@ SEASMap allows users to:
 
 ## Functionality
 
-- **Map Management:** Create, view, and delete maps with nodes and paths.
+- **Map Management:** Create and view maps with nodes and paths.
 - **Shortest Path Calculation:** Compute the shortest path between two nodes using Dijkstra’s algorithm.
 - **Frontend Interaction:** Minimal static frontend pages that call backend APIs.
 - **Data Persistence:** Maps and paths stored in MongoDB using Mongoose schemas.
@@ -56,3 +56,8 @@ SEASMap allows users to:
    ```powershell
    cd "c:\Users\nilde\OneDrive\Desktop\SEAS FULL STACK\backend"
    npm install
+   
+#Author
+Nilesh Desai
+
+
